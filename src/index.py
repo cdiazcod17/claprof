@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 from flask_mysqldb import MySQL
 
 #creo objeto para crear rutas
@@ -26,6 +26,23 @@ def about():
 @app.route('/register')
 def register():
     return render_template('register.html')
+
+@app.route('/add_user', methods=['POST'])
+def add_User():
+    if request.method == 'POST':
+        usuario = request.form['usuario']
+        nombres = request.form['nombres']
+        apellidos = request.form['apellidos']
+        password = request.form['password']
+        email = request.form['email']
+        direccion = request.form['direccion']
+        print(usuario)
+        print(nombres)
+        print(apellidos)
+        print(password)
+        print(email)
+        print(direccion)
+        return "received"
 
 #comprobar si estamos en el archivo principal
 if __name__ == '__main__':

@@ -1,50 +1,47 @@
 {% extends "layout.html" %} {% block content %}
+<h1 class="text-center text-navi">Registro de Usuarios</h1>
 <div class="container mt-xl-5">
-  <form>
+  <form action="/add_user" method="POST">
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputUsuario">Usuario</label>
-        <input type="text" class="form-control" id="inputUsuario">
+        <input type="text" class="form-control" id="inputUsuario"  name="usuario" placeholder="">
       </div>   
       <div class="form-group col-md-6">
         <label for="inputNombres">Nombres</label>
-        <input type="text" class="form-control" id="inputNombres">
+        <input type="text" class="form-control" id="inputNombres" name="nombres">
       </div>
       <div class="form-group col-md-6">
         <label for="inputPassword4">Apellidos</label>
-        <input type="text" class="form-control" id="inputApellidos">
+        <input type="text" class="form-control" id="inputApellidos" name="apellidos">
       </div>   
       <div class="form-group col-md-6">
         <label for="inputEmail4">Email</label>
-        <input type="email" class="form-control" id="inputEmail">
+        <input type="email" class="form-control" id="inputEmail" name="email">
       </div>
       <div class="form-group col-md-6">
         <label for="inputPassword4">Contraseña</label>
-        <input type="password" class="form-control" id="inputPassword">
+        <input type="password" class="form-control" id="inputPassword" name="password">
       </div>   
     <div class="form-group col-md-6">
       <label for="inputAddress">Dirección</label>
-      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-    </div>    
-      <div class="form-group col-md-4">
+      <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" name="direccion">
+    </div> 
+    <div class="form-group col-md-6">
+      <label for="inputTelefono">Teléfono</label>
+      <input type="text" class="form-control" id="inputTelefono" placeholder="3121120000" name="telefono">
+    </div>     
+      <div class="form-group col-md-6">
         <label for="inputCiudad">Ciudad</label>
-        <select id="inputCiudad" class="form-control">
+        <select id="inputCiudad" class="form-control" name="ciudad">
           <option selected>Bogotá</option>
           <option>Medellin</option>
           <option>Cali</option>
           <option>Barranquilla</option>
         </select>
       </div>     
-    </div>
-    <div class="form-group">
-      <div class="form-check">
-        <input class="form-check-input" type="checkbox" id="gridCheck">
-        <label class="form-check-label" for="gridCheck">
-          Check me out
-        </label>
-      </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Sign in</button>
+    </div>    
+    <button type="submit" class="btn btn-primary btn-lg btn-block">Registrar</button>
   </form>
 </div>
 
