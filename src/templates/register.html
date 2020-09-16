@@ -1,40 +1,40 @@
 {% extends "layout.html" %} {% block content %}
-
-<form>
+<div class="container mt-xl-5">
+  <form>
     <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="inputUsuario">Usuario</label>
+        <input type="text" class="form-control" id="inputUsuario">
+      </div>   
+      <div class="form-group col-md-6">
+        <label for="inputNombres">Nombres</label>
+        <input type="text" class="form-control" id="inputNombres">
+      </div>
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Apellidos</label>
+        <input type="text" class="form-control" id="inputApellidos">
+      </div>   
       <div class="form-group col-md-6">
         <label for="inputEmail4">Email</label>
-        <input type="email" class="form-control" id="inputEmail4">
+        <input type="email" class="form-control" id="inputEmail">
       </div>
       <div class="form-group col-md-6">
-        <label for="inputPassword4">Password</label>
-        <input type="password" class="form-control" id="inputPassword4">
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="inputAddress">Address</label>
+        <label for="inputPassword4">Contraseña</label>
+        <input type="password" class="form-control" id="inputPassword">
+      </div>   
+    <div class="form-group col-md-6">
+      <label for="inputAddress">Dirección</label>
       <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-    </div>
-    <div class="form-group">
-      <label for="inputAddress2">Address 2</label>
-      <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputCity">City</label>
-        <input type="text" class="form-control" id="inputCity">
-      </div>
+    </div>    
       <div class="form-group col-md-4">
-        <label for="inputState">State</label>
-        <select id="inputState" class="form-control">
-          <option selected>Choose...</option>
-          <option>...</option>
+        <label for="inputCiudad">Ciudad</label>
+        <select id="inputCiudad" class="form-control">
+          <option selected>Bogotá</option>
+          <option>Medellin</option>
+          <option>Cali</option>
+          <option>Barranquilla</option>
         </select>
-      </div>
-      <div class="form-group col-md-2">
-        <label for="inputZip">Zip</label>
-        <input type="text" class="form-control" id="inputZip">
-      </div>
+      </div>     
     </div>
     <div class="form-group">
       <div class="form-check">
@@ -46,5 +46,7 @@
     </div>
     <button type="submit" class="btn btn-primary">Sign in</button>
   </form>
+</div>
+
 
 {% endblock %}
