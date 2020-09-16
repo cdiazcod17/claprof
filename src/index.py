@@ -36,12 +36,11 @@ def add_User():
         password = request.form['password']
         email = request.form['email']
         direccion = request.form['direccion']
-        print(usuario)
-        print(nombres)
-        print(apellidos)
-        print(password)
-        print(email)
-        print(direccion)
+        telefono = request.form['telefono']
+        ciudad = request.form['ciudad']
+        cur = mysql.connection.cursor()
+        cur.execute('INSERT INTO usuarios (Nombre, Apellido, Email, Usuario,Telefono,Password,Direccion,id_Ciudad) VALUES(%s, %s, %s,%s,%s,%s,%s,%s)',(nombres,apellidos,email,usuario,telefono,password,direccion,ciudad))
+        mysql.connection.commit()
         return "received"
 
 #comprobar si estamos en el archivo principal
