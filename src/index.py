@@ -1,11 +1,10 @@
 from flask import Flask, render_template
-
-#from flask_mysqldb import MySQL
+from flask_mysqldb import MySQL
 
 #creo objeto para crear rutas
 app = Flask(__name__)
 #conexion a la base de datos
-#mysql = MySQL()
+mysql = MySQL()
 
 #crear rutaS
 @app.route('/')
